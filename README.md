@@ -153,7 +153,7 @@ Server will run at: [http://localhost:8081](http://localhost:8081)
 Swagger UI is available at: [http://localhost:8081/api-docs](http://localhost:8081/api-docs)
 
 ###  Using JWT in Swagger
-1. Login using `/api/auth/login`
+1. Login using `/api/login`
 2. Copy the `accessToken`
 3. Click **Authorize 🔒**
 4. Paste: `Bearer <your_token>`
