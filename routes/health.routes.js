@@ -3,6 +3,16 @@ import prisma from '../config/db.js';
 
 const router = express.Router();
 
+/**
+ * @swagger
+ * /health:
+ *   get:
+ *     summary: Health check
+ *     tags: [Health]
+ *     responses:
+ *       200:
+ *         description: Server is healthy
+ */
 router.get('/', async (req, res) => {
   try {
     

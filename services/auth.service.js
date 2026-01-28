@@ -29,7 +29,7 @@ export const registerService = async ({ name, email, password, role }) => {
   };
 };
 
-export const loginService = async ({ email, password }) => {
+export const  loginService = async ({ email, password }) => {
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) {
     throw { status: 401, message: "Invalid credentials" };
@@ -43,7 +43,7 @@ export const loginService = async ({ email, password }) => {
   const token = jwt.sign(
     { userId: user.id, role: user.role },
     process.env.JWT_SECRET,
-    { expiresIn: process.env.JWT_EXPIRES_IN },
+    { expiresIn: process.env.JWT_EXPIRES_IN || '1d' },
   );
 
   return {
