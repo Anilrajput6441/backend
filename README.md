@@ -90,35 +90,9 @@ When running with Docker, database credentials are provided via `docker-compose.
 
 ## Setup & Installation
 
-### Option 1: Run Locally (Without Docker)
 
-1️⃣ **Clone the repository**
-```bash
-git clone <repository-url>
-cd mini-crm-backend
-```
 
-2️⃣ **Install dependencies**
-```bash
-npm install
-```
-
-3️⃣ **Setup Prisma & Database**
-```bash
-npx prisma migrate dev --name init
-npx prisma generate
-```
-
-4️⃣ **Start the server**
-```bash
-npm run dev
-```
-
-Server will run at: [http://localhost:8081](http://localhost:8081)
-
----
-
-### Option 2: Run with Docker (Recommended)
+### Option 1: Run with Docker 
 
 #### Prerequisites
 - Docker
@@ -146,11 +120,39 @@ docker-compose down
 
 ---
 
-## 📖 API Documentation (Swagger)
+### Option 2: Run Locally (Without Docker)
+
+1️ **Clone the repository**
+```bash
+git clone <repository-url>
+cd mini-crm-backend
+```
+
+2️ **Install dependencies**
+```bash
+npm install
+```
+
+3️ **Setup Prisma & Database**
+```bash
+npx prisma migrate dev --name init
+npx prisma generate
+```
+
+4️ **Start the server**
+```bash
+npm run dev
+```
+
+Server will run at: [http://localhost:8081](http://localhost:8081)
+
+---
+
+##  API Documentation (Swagger)
 
 Swagger UI is available at: [http://localhost:8081/api-docs](http://localhost:8081/api-docs)
 
-### 🔑 Using JWT in Swagger
+###  Using JWT in Swagger
 1. Login using `/api/auth/login`
 2. Copy the `accessToken`
 3. Click **Authorize 🔒**
@@ -158,16 +160,16 @@ Swagger UI is available at: [http://localhost:8081/api-docs](http://localhost:80
 
 ---
 
-## 🧪 Sample API Flow
-- **Register User**: `POST /api/auth/register`
-- **Login**: `POST /api/auth/login`
+##  Sample API Flow
+- **Register User**: `POST /api/register`
+- **Login**: `POST /api/login`
 - **Get Users (ADMIN)**: `GET /api/users`
 - **Create Customer (ADMIN)**: `POST /api/customers`
 - **Create Task (ADMIN)**: `POST /api/tasks`
 
 ---
 
-## ❗ Error Handling
+##  Error Handling
 
 | Status Code | Description |
 |---|---|
@@ -180,7 +182,7 @@ Swagger UI is available at: [http://localhost:8081/api-docs](http://localhost:80
 
 ---
 
-## ✅ Assignment Requirements Covered
+## Assignment Requirements Covered
 
 - JWT Authentication
 - Role-based Authorization
@@ -190,3 +192,5 @@ Swagger UI is available at: [http://localhost:8081/api-docs](http://localhost:80
 - Dockerized Backend
 - PostgreSQL via Docker
 - Health Check Endpoint
+
+## thannkYou ;) 
